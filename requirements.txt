@@ -1,3 +1,4 @@
 flask==1.1.2
 spacy==2.3.2
 pandas>=1.0.5
+imdbpy
