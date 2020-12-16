@@ -1,7 +1,9 @@
 # Flask-Api's
 In this repository I am developing different flask api's which are basic and useful.
 All this API's work with postman calling with proper url mentioned for each api
-Clone the repository and run the `apis.py` script which will run in local server. Call the required api for after the local server url address.\n
+Clone the repository and run the `apis.py` script which will run in local server. Call the required api for after the local server url address.
+
+
 
 
 ## IMDB Data Search (`/imdb`) 
