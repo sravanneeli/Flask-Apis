@@ -65,9 +65,11 @@ def actordirect(question):
     _year = entity_dict['DATE']
     
     if "act" in question:
-        actor_dict = pd.DataFrame(imdb_actor_search(person_dict, _year))
-        return actor_dict.to_html(index=False, justify='center')
+        # actor_dict = pd.DataFrame(imdb_actor_search(person_dict, _year)) # use this when html format table is needed
+        # return actor_dict.to_html(index=False, justify='center')
+        return imdb_actor_search(person_dict, _year)
 
     elif "direct" in question:
-        director_dict = pd.DataFrame(imdb_director_search(person_dict, _year))
-        return director_dict.to_html(index=False, justify='center')
+        # director_dict = pd.DataFrame(imdb_director_search(person_dict, _year)) # use this when html format table is needed
+        # return director_dict.to_html(index=False, justify='center')
+        return imdb_director_search(person_dict, _year)
