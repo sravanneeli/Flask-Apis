@@ -1,5 +1,5 @@
 from flask import Flask, request
-from imbd_search import actordirect
+from imbd_search import movie_qa
 
 app = Flask(__name__)
 
@@ -11,9 +11,15 @@ def imbd_movie_search():
         print("IMDB movie search api is called")
         input_dict = request.get_json()
         question = input_dict['Question']
-        response = actordirect(question) # movies list
-        return {"answer": response}
-        # return {"html":response.replace("\n", "")} # html respone
+        response = movie_qa(question) # movies list
+        # return {"answer": response}
+        return {
+                "status": 200,
+                "message": "Fetched information successfully.",
+                "code": 200,
+                "data": response
+            }
+        
         
 
 if __name__ == '__main__':
